@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+
+<BorderPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project.tcpip.AppMainController">
+    <top>
+        <VBox>
+            <HBox alignment="CENTER">
+                <padding>
+                    <Insets topRightBottomLeft="10.0" />
+                </padding>
+                <spacing>20.0</spacing>
+                <Label prefHeight="20.0" prefWidth="100.0" text="TEMPERATURE" />
+                <ProgressBar fx:id="progressbar_temperature" prefHeight="20.0" prefWidth="350.0" />
+                <Label fx:id="label_temperature" prefHeight="20.0" prefWidth="50.0" text="온도" />
+            </HBox>
+            <HBox alignment="CENTER">
+                <padding>
+                    <Insets topRightBottomLeft="10.0" />
+                </padding>
+                <spacing>20.0</spacing>
+                <Label prefHeight="20.0" prefWidth="100.0" text="HUMIDITY" />
+                <ProgressBar fx:id="progressbar_humidity" prefHeight="20.0" prefWidth="350.0" />
+                <Label fx:id="label_humidity" prefHeight="20.0" prefWidth="50.0" text="습도" />
+            </HBox>
+            <HBox alignment="CENTER">
+                <padding>
+                    <Insets topRightBottomLeft="10.0" />
+                </padding>
+                <spacing>20.0</spacing>
+                <Label prefHeight="20.0" prefWidth="100.0" text="CDS_VALUE" />
+                <ProgressBar fx:id="progressbar_cds" prefHeight="20.0" prefWidth="350.0" />
+                <Label fx:id="label_cds" prefHeight="20.0" prefWidth="50.0" text="조도" />
+            </HBox>
+        </VBox>
+    </top>
+
+    <center>
+        <VBox>
+            <padding>
+                <Insets topRightBottomLeft="50.0" />
+            </padding>
+            <spacing>50.0</spacing>
+            <HBox alignment="BOTTOM_CENTER">
+                <spacing>100.0</spacing>
+                <Circle fx:id="rgb_led" fill="red" radius="50.0" stroke="black" />
+                <Circle fx:id="step_motor" fill="gray" radius="50.0" stroke="black" />
+            </HBox>
+        </VBox>
+    </center>
+    <bottom>
+        <HBox alignment="CENTER">
+            <padding>
+                <Insets bottom="200.0" />
+            </padding>
+            <spacing>50.0</spacing>
+            <Button fx:id="button_rgb_led" onAction="#buttonOnClickedRGBLED" prefHeight="30.0" prefWidth="200.0" text="RGB LED" />
+            <Button fx:id="button_step_motor" onAction="#buttonOnClickedStepMotor" prefHeight="30.0" prefWidth="200.0" text="Sprinkler" />
+        </HBox>
+    </bottom>
+</BorderPane>
